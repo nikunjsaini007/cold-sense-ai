@@ -33,6 +33,8 @@ app.use("/api/ai", aiRoutes);
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-    console.log(`ColdSense.ai server running on port ${PORT}`);
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`ColdSense backend running on port ${PORT}`);
 });
