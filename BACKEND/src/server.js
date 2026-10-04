@@ -10,8 +10,6 @@ const shipmentRoutes =
     require("./routes/shipmentRoutes");
 const alertRoutes =
     require("./routes/alertRoutes");
-const aiRoutes =
-    require("./routes/aiRoutes");
 
 
 const app = express();
@@ -29,12 +27,9 @@ app.use("/api/telemetry", telemetryRoutes);
 app.use("/api/risk", riskRoutes);
 app.use("/api/shipments", shipmentRoutes);
 app.use("/api/alerts", alertRoutes);
-app.use("/api/ai", aiRoutes);
 
 const PORT = process.env.PORT || 5000;
 
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, "0.0.0.0", () => {
-    console.log(`ColdSense backend running on port ${PORT}`);
+app.listen(PORT, () => {
+    console.log(`ColdSense.ai server running on port ${PORT}`);
 });
